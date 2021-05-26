@@ -602,7 +602,7 @@ def generate_list(f_deposit_path,f_loan_path,start_date):
 list_depositors_template,list_borrowers_template = generate_list(f_deposit_path,f_loan_path,start_date)
 
 print('running simulation')
-for run in range(0,10):
+for run in range(0,12):
     print('simulation ' +str(run))
 
     #reward function reset
@@ -655,7 +655,7 @@ for run in range(0,10):
     deposit_grid_attric = deposit_empty_grid
     
     #simulate for 10 years
-    for day_cnt in range(0,7):
+    for day_cnt in range(0,30):
         print(day_cnt)
         today_dte = start_date + datetime.timedelta(days=day_cnt)
         loan_grid_choice=""
